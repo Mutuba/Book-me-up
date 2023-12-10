@@ -7,9 +7,8 @@
     <br/>
 
     <!-- Add a Google OAuth button -->
-    <%= link_to user_google_oauth2_omniauth_authorize_path, method: :post, data: { turbo: "false" } do %>
-        <%= image_tag("web_light_sq_SI.svg", alt: "Google Sign In") %>
+    <%= button_to user_google_oauth2_omniauth_authorize_path, method: :post, data: { turbo: "false" }, class: "btn btn-link" do %>
+        <%= image_tag("web_light_sq_SI.svg", alt: "Google Sign In", class: "google-sign-in-image") %>
     <% end %>
-
   </div>
 </div>
