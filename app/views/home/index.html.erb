@@ -1,0 +1,12 @@
+<div class="container d-flex align-items-center justify-content-center">
+  <div>
+    <br/>
+    <br/>
+    <h1>Welcome to Bookme App</h1>
+    <p> We are excited to have you. To get started either create an account or login if you have one</p>
+    <br/>
+
+    <!-- Add a Google OAuth button -->
+<%= button_to 'Login with Google', user_google_oauth2_omniauth_authorize_path, method: :post, :data => {turbo: "false"} %>
+  </div>
+</div>
