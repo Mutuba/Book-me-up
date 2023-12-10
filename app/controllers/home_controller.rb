@@ -1,8 +1,5 @@
 class HomeController < ApplicationController
 
-  def index
-    
-    # binding.pry
-    
+  def index    
   end
 end
