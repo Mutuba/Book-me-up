@@ -1,6 +1,6 @@
-<nav class="navbar navbar-expand-lg navbar-light  bg-primary">
+<nav class="navbar navbar-expand-lg navbar-light bg-primary" style="margin-bottom: 20px;">
   <div class="container-fluid">
-    <%= link_to "URLS Shortener", root_path, class:'navbar-brand'%>
+    <%= link_to "Book Me Up", root_path, class:'navbar-brand'%>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
     data-bs-target="#navbarSupportedContent" 
     aria-controls="navbarSupportedContent" 
@@ -9,29 +9,10 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <% if !current_user %>
-          <li class="nav-item">
-            <%= link_to "Home", get_started_path, class:'nav-link'%>
-        </li>
-        <% end %>
 
-        <% if current_user %>
-          <li class="nav-item">
-            <%= link_to "Batch Metrics", batch_stats_path, class:"nav-link" %>
-          </li>
-          <li class="nav-item">
-            <%= link_to "My Urls", urls_path, class:"nav-link" %>
-          </li>
-          <li class="nav-item" id="upload-url-item">
-            <%= link_to "Upload Urls", new_url_path, class:"nav-link" %>
-          </li>
-          <li class="nav-item">
-            <%= link_to "View Uploads", current_upload_status_path, class:"nav-link" %>
-          </li>
-        <% end %>
       </ul>
       <ul class="navbar-nav">
-        <%= render 'user/session_manager' %>
+        <%= render 'devise/sessions/session_manager' %>
       </ul>
     </div>
   </div>
