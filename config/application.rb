@@ -33,5 +33,9 @@ module Bookme
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+    config.i18n.available_locales = [:en, :de, :fr]
+    config.i18n.default_locale = :en
+    config.beginning_of_week = :sunday
+    config.assets.precompile += %w( simple_calendar_custom.css )
   end
 end

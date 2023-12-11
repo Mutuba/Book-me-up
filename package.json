@@ -2,6 +2,11 @@
   "name": "app",
   "private": "true",
   "dependencies": {
+    "@fullcalendar/bootstrap": "^6.1.10",
+    "@fullcalendar/core": "^6.1.10",
+    "@fullcalendar/daygrid": "^6.1.10",
+    "@fullcalendar/react": "^6.1.10",
+    "@fullcalendar/timegrid": "^6.1.10",
     "@hotwired/stimulus": "^3.2.2",
     "@hotwired/turbo-rails": "^8.0.0-beta.1",
     "@popperjs/core": "^2.11.8",

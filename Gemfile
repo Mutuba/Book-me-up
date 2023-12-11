@@ -28,6 +28,8 @@ gem 'google-api-client', '~> 0.44'
 gem 'omniauth-google-oauth2'
 gem 'omniauth-rails_csrf_protection', '~> 1.0' # https://github.com/heartcombo/devise/issues/5236
 
+gem 'sassc-rails'
+
 gem 'dotenv-rails', groups: [:development, :test]
 
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
@@ -41,7 +43,8 @@ gem "jbuilder"
 
 # Use Redis adapter to run Action Cable in production
 gem "redis", "~> 4.0"
-
+gem "simple_calendar", "~> 2.4"
+gem 'rails-i18n'
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
 
