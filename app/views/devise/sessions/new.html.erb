@@ -1,28 +1,12 @@
-<div class ="container d-flex align-items-center justify-content-center">
+<div class="container d-flex align-items-center justify-content-center">
   <div>
-    <h2>Log in</h2>
-    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-      <div class="field">
-        <%= f.label :email %><br />
-        <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-      </div>
-      <div class="field">
-        <%= f.label :password %><br />
-        <%= f.password_field :password, autocomplete: "current-password" %>
-      </div>
-      <% if devise_mapping.rememberable? %>
-        <div class="field">
-          <%= f.check_box :remember_me %>
-          <%= f.label :remember_me %>
-        </div>
-      <% end %>
-      <div class="actions login-button">
-        <%= f.submit "Log in" , class: "btn btn-primary"%>
-      </div>
+    <br/>
+    <h1>Book Me</h1>
+
+    <!-- Add a Google OAuth button -->
+    <%= button_to user_google_oauth2_omniauth_authorize_path, method: :post, data: { turbo: "false" }, params: { authenticity_token: form_authenticity_token }, class: "btn btn-link" do %>
+        <%= image_tag("web_light_sq_SI.svg", alt: "Google Sign In", class: "google-sign-in-image") %>
     <% end %>
-    <div class="have-an-account">
-      <p> Don't have an account? </p>
-    </div>
-    <%= render "devise/shared/links" %>
+
   </div>
 </div>
