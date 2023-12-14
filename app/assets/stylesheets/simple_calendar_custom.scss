@@ -6,7 +6,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    background-color: #f8f9fa;
+    // background-color: #f8f9fa;
 
     .calendar-title {
       font-size: 1.5rem;
@@ -39,6 +39,20 @@
       vertical-align: top;
       height: 5.75rem;
       width: 5.75rem;
+    }
+
+    td.day_calendar {
+      text-align: center;
+      border: 1px solid #ddd;
+      vertical-align: top;
+      height: 2rem;
+    }
+
+    td.week_calendar {
+      text-align: center;
+      border: 1px solid #ddd;
+      vertical-align: top;
+      height: 2rem;
     }
 
     th {

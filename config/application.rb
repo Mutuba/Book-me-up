@@ -32,6 +32,7 @@ module Bookme
     # config.eager_load_paths << Rails.root.join("extras")
 
     # Don't generate system test files.
+    config.autoload_paths += %W(#{config.root}/lib)
     config.generators.system_tests = nil
     config.i18n.available_locales = [:en, :de, :fr]
     config.i18n.default_locale = :en

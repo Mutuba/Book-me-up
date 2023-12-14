@@ -1,15 +1,19 @@
 <div class="simple-calendar">
   <div class="calendar-heading">
     <%= link_to t('simple_calendar.previous', default: 'Previous'), calendar.url_for_previous_view %>
-
+<span class="calendar-title"><%= t('date.month_names')[start_date.month] %> <%= start_date.year %></span>
     <%= link_to t('simple_calendar.next', default: 'Next'), calendar.url_for_next_view %>
   </div>
-
-  <table class="table table-striped">
+<div class="table-responsive">
+  <table class="table">
     <thead>
       <tr>
         <% date_range.slice(0, 7).each do |day| %>
-          <th><%= t('date.abbr_day_names')[day.wday] %></th>
+          <th>
+             <h6><%= t('date.abbr_day_names')[day.wday] %><br></h6>
+             <h3><%= day.day %> </h3>
+
+          </th>
         <% end %>
       </tr>
     </thead>
@@ -19,7 +23,7 @@
         <tr>
           <% date_range.each_slice(7) do |week| %>
             <% week.each do |day| %>
-              <td>
+              <td class="week_calendar">
                 <%= "#{hour}:00" %>
               </td>
             <% end %>
@@ -28,4 +32,5 @@
       <% end %>
     </tbody>
   </table>
+  </div>
 </div>
