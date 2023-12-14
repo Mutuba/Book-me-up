@@ -4,14 +4,14 @@
 <span class="calendar-title"><%= t('date.month_names')[start_date.month] %> <%= start_date.year %></span>
     <%= link_to t('simple_calendar.next', default: 'Next'), calendar.url_for_next_view %>
   </div>
-<div class="table-responsive">
+<div class="table-container">
   <table class="table">
-    <thead>
+<thead class="sticky-top bg-light">
       <tr>
         <% date_range.slice(0, 7).each do |day| %>
           <th>
-             <h6><%= t('date.abbr_day_names')[day.wday] %><br></h6>
-             <h3><%= day.day %> </h3>
+            <small>  <%= t('date.abbr_day_names')[day.wday] %><br> </small>
+             <h5><%= day.day %> </h5>
 
           </th>
         <% end %>
