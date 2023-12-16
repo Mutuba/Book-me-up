@@ -26,6 +26,7 @@ class ApplicationController < ActionController::Base
   
       if user_timezone.present?
         Time.zone = user_timezone || "UTC"
+        current_user.update!(timezone: user_timezone)
       else
         sign_out(current_user)
         flash[:alert] = 'Invalid timezone information. Please log in again.'
