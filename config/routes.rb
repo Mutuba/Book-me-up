@@ -6,7 +6,6 @@ Rails.application.routes.draw do
     sessions: 'users/sessions',
   }
 
-  # Other routes...
   root "home#index"
 
   get 'dashboard', to: 'dashboard#index'
