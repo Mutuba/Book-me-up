@@ -23,6 +23,8 @@ gem "turbo-rails"
 gem 'devise'
 gem 'google-api-client', '~> 0.44'
 
+gem 'geocoder'
+
 # gem 'google-apis-calendar', require: 'google/apis/calendar_v3'
 
 gem 'omniauth-google-oauth2'
@@ -31,6 +33,7 @@ gem 'omniauth-rails_csrf_protection', '~> 1.0' # https://github.com/heartcombo/d
 gem 'sassc-rails'
 
 gem 'dotenv-rails', groups: [:development, :test]
+gem 'rails-assets-jsTimezoneDetect', source: 'https://rails-assets.org'
 
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
 gem "stimulus-rails"

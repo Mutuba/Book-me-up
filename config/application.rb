@@ -38,5 +38,16 @@ module Bookme
     config.i18n.default_locale = :en
     config.beginning_of_week = :sunday
     config.assets.precompile += %w( simple_calendar_custom.css )
+
+    config.geocoder = {
+      ip_lookup: :maxmind,
+      maxmind: {
+        service: :city,
+        basic_auth: {
+          username: ENV['MAX_MIND_ACCOUNT_ID'],
+          password: ENV['MAX_MIND_LICENSE_KEY']
+        }
+      }
+    }
   end
 end

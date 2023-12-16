@@ -6,7 +6,7 @@
           when 'month' then 'Month'
           when 'week' then 'Week'
           when 'day' then 'Day'
-          else 'Select View'
+          else 'Month'
         end %>
       </button>
       <ul class="dropdown-menu dropdown-menu-lg-end" aria-labelledby="viewDropdown" style="max-height: 100px; overflow-y: auto;">
@@ -33,6 +33,10 @@
     <% when 'day' %>
       <%= day_calendar(number_of_days: 1) do |calendar| %>
         <%= render partial: 'simple_calendar/day_calendar', locals: { calendar: calendar } %>
+      <% end %>
+    <% else %>
+      <%= month_calendar do |date| %>
+        <%= date.day %>
       <% end %>
     <% end %>
   </div>

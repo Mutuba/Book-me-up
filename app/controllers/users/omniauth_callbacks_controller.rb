@@ -2,12 +2,10 @@
 
 class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
-
   def google_oauth2
     user = User.from_omniauth(auth)
     if user.persisted?
       sign_out_all_scopes
-      # request.env['omniauth.auth'].credentials.token
       flash[:success] = t 'devise.omniauth_callbacks.success', kind: 'Google'
       sign_in_and_redirect user, event: :authentication
     else
@@ -26,7 +24,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   end
 
   def after_sign_in_path_for(resource_or_scope)
-    stored_location_for(resource_or_scope) || dashboard_path
+    stored_location_for(resource_or_scope) || root_path
   end
 
   private
